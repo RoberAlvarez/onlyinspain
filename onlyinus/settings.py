@@ -13,6 +13,9 @@ environ.Env.read_env()  # By default, reads .env at the project root
 SECRET_KEY = env("SECRET_KEY", default="secret-default-key")
 DEBUG = env.bool("DEBUG", default=False)
 
+SECURE_SSL_REDIRECT = True  # Redirect all HTTP requests to HTTPS
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
 #DEBUG = True
 ALLOWED_HOSTS = ['.herokuapp.com', 'localhost', '127.0.0.1', 'onlyinspain.com',
                  'onlyinspain.com',
