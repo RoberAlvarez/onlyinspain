@@ -5,8 +5,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 #SECRET_KEY = '5vmq3r!&#4p=a1f2a12-8f3k2k7kmzh&s7r(s%o7n*)7p5smk@!k'
 import os
-SECRET_KEY = os.environ.get('SECRET_KEY', '5vmq3r!&#4p=a1f2a12-8f3k2k7kmzh&s7r(s%o7n*)7p5smk@!k')
-DEBUG = os.environ.get('DEBUG', 'False') == 'True'
+import environ
+
+env = environ.Env()
+environ.Env.read_env()  # By default, reads .env at the project root
+
+SECRET_KEY = env("SECRET_KEY", default="secret-default-key")
+DEBUG = env.bool("DEBUG", default=False)
 
 #DEBUG = True
 ALLOWED_HOSTS = ['.herokuapp.com', 'localhost', '127.0.0.1', 'onlyinspain.com',
