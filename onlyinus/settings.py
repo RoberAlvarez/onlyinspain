@@ -9,9 +9,9 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '5vmq3r!&#4p=a1f2a12-8f3k2k7kmzh&s7r(s
 DEBUG = os.environ.get('DEBUG', 'False') == 'True'
 
 #DEBUG = True
-ALLOWED_HOSTS = ['.herokuapp.com', 'localhost', '127.0.0.1', 'onlyinus.com',
-                 'onlyinunitedstates.com',
-                 'www.onlyinunitedstates.com',
+ALLOWED_HOSTS = ['.herokuapp.com', 'localhost', '127.0.0.1', 'onlyinspain.com',
+                 'onlyinspain.com',
+                 'www.onlyinspain.com',
                  'onlyinus-03002030b278.herokuapp.com'
                  ]
 
