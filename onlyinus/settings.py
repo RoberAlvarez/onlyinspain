@@ -12,7 +12,8 @@ DEBUG = os.environ.get('DEBUG', 'False') == 'True'
 ALLOWED_HOSTS = ['.herokuapp.com', 'localhost', '127.0.0.1', 'onlyinspain.com',
                  'onlyinspain.com',
                  'www.onlyinspain.com',
-                 'onlyinus-03002030b278.herokuapp.com'
+                 'onlyinus-03002030b278.herokuapp.com',
+                 '*'
                  ]
 
 INSTALLED_APPS = [
